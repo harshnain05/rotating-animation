@@ -1,0 +1,19 @@
+.parent{
+  --color: black;
+background-image: linear-gradient(var(--angle), white 50%, var(--color) 50%);
+  animation: bg-rotate 4000ms linear infinite;
+}
+@keyframes bg-rotate {
+from{
+  --angle:0deg;
+}
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
